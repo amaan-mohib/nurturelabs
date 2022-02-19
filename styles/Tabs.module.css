@@ -1,0 +1,24 @@
+.tableSec {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.tabs {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.tab {
+  font-family: "Inter";
+  font-size: 18px;
+  font-weight: 600;
+  color: #808191;
+  margin-right: 20px;
+}
+.tab:hover {
+  cursor: pointer;
+  color: white;
+}
+.selectedTab {
+  color: white;
+}

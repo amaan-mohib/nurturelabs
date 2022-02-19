@@ -1,9 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap");
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: black;
+  color: white;
 }
 
 a {
@@ -13,4 +18,49 @@ a {
 
 * {
   box-sizing: border-box;
+  transition-duration: 0.1s;
+}
+button {
+  font-family: "Inter";
+  cursor: pointer;
+  transition-duration: 0s;
+}
+button:hover {
+  filter: brightness(120%) saturate(120%);
+}
+button:active {
+  filter: brightness(110%) saturate(110%);
+}
+.underline {
+  position: relative;
+}
+.underline::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  bottom: -5px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-radius: 10px;
+  background: #3772ff;
+}
+.primary-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #3772ff;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  padding: 7px 15px;
+  font-weight: 700;
+}
+.primary-btn svg {
+  margin-right: 8px;
+}
+.secondary-btn {
+  background-color: black;
+  border: 2px solid #242731;
 }

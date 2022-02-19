@@ -1,0 +1,92 @@
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 0.5rem;
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 14px;
+}
+.table th {
+  padding: 10px;
+}
+.tbody {
+  width: 100%;
+}
+.tbody td {
+  background-color: rgba(36, 39, 49, 0.4);
+  padding: 15px 10px;
+}
+.thead {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #808191;
+
+  font-size: 10px;
+  line-height: 24px;
+  background: #191b20;
+
+  /* border-radius: 8px; */
+}
+.thead th:first-of-type {
+  border-radius: 8px 0 0 8px;
+}
+.thead th:last-of-type {
+  border-radius: 0 8px 8px 0;
+}
+.first {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.asset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 15px;
+}
+.type {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #808191;
+  margin-top: 3px;
+}
+.typeBadge {
+  display: flex;
+  align-items: center;
+  background: #353945;
+  border-radius: 500px;
+  font-size: 10px;
+  color: white;
+  padding: 2px 7px;
+  margin-left: 1ch;
+}
+.second {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.second > p,
+.second > a {
+  text-transform: capitalize;
+  color: #808191;
+  font-weight: 500;
+  margin: 3px 0;
+  display: flex;
+  align-items: center;
+  line-height: 20px;
+}
+.third {
+  text-align: center;
+}
+.tbody > tr td:first-of-type {
+  border-radius: 5px 0 0 5px;
+}
+.tbody > tr td:last-of-type {
+  border-radius: 0 5px 5px 0;
+}
