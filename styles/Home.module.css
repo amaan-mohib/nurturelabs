@@ -103,3 +103,14 @@
   padding: 3px 10px;
   margin-left: 15px;
 }
+@media only screen and (max-width: 1130px) {
+  .container {
+    flex-direction: column;
+  }
+  .section {
+    width: 100%;
+  }
+  .section > header {
+    margin-left: 45px;
+  }
+}

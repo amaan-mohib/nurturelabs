@@ -24,7 +24,7 @@ const Table: NextPage = () => {
       });
   }, []);
   return (
-    <div>
+    <div style={{ width: "100%", overflowX: "auto" }}>
       <table className={styles.table}>
         <thead className={styles.thead}>
           <th>Asset</th>

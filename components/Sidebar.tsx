@@ -64,95 +64,104 @@ const Sidebar: NextPage = () => {
     },
   ];
   const [checked, setChecked] = useState(true);
+  const [menu, setMenu] = useState(false);
   const handleChange = (nextChecked: boolean) => {
     setChecked(nextChecked);
   };
   return (
-    <div className={styles.sidebar}>
-      <div className={styles.topmenu}>
-        <div className={styles.avatar} style={{ marginRight: "10px" }}>
-          N
-        </div>
-        <h2>Name</h2>
-        <IconMenu2 style={{ marginLeft: "auto" }} />
+    <>
+      <div className={styles.drawer} onClick={() => setMenu(!menu)}>
+        <IconMenu2 />
       </div>
-      {MenuItems.map((item, index) => (
-        <div
-          key={index}
-          className={`${styles.menuitem} ${
-            index === selected ? styles.selectedmenuitem : ""
-          }`}
-          onClick={() => setSelected(index)}>
-          {item.icon}
-          <span>{item.text}</span>
-        </div>
-      ))}
-      <div className={styles.bottommenu}>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-around",
-          }}>
-          <div className={styles.balance}>
-            <div
-              className={styles.avatar}
-              style={{
-                marginRight: "8px",
-                width: "18px",
-                height: "18px",
-                fontSize: "10px",
-              }}>
-              N
-            </div>
-            $0.90
+      <div className={`${styles.sidebar} ${menu ? styles.sidebarActive : ""}`}>
+        <div className={styles.topmenu}>
+          <div className={styles.avatar} style={{ marginRight: "10px" }}>
+            N
           </div>
-          <button className={styles.buy}>Buy $XYZ</button>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            marginTop: "20px",
-            padding: "0 10px",
-          }}>
-          <IconWorld color="#808191" style={{ marginRight: "20px" }} />
-          <Switch
-            onChange={handleChange}
-            checked={checked}
-            offColor="#fff"
-            onColor="#353945"
-            onHandleColor="#3772FF"
-            offHandleColor="#3772FF"
-            checkedIcon={
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  height: "100%",
-                  color: "#808191",
-                  paddingRight: 2,
-                }}>
-                <IconMoonStars />
-              </div>
-            }
-            uncheckedIcon={
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  height: "100%",
-                  color: "black",
-                  paddingLeft: 2,
-                }}>
-                <IconBrightness2 />
-              </div>
-            }
+          <h2>Name</h2>
+          <IconMenu2
+            style={{ marginLeft: "auto" }}
+            onClick={() => setMenu(false)}
           />
         </div>
+        {MenuItems.map((item, index) => (
+          <div
+            key={index}
+            className={`${styles.menuitem} ${
+              index === selected ? styles.selectedmenuitem : ""
+            }`}
+            onClick={() => setSelected(index)}>
+            {item.icon}
+            <span>{item.text}</span>
+          </div>
+        ))}
+        <div className={styles.bottommenu}>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+            }}>
+            <div className={styles.balance}>
+              <div
+                className={styles.avatar}
+                style={{
+                  marginRight: "8px",
+                  width: "18px",
+                  height: "18px",
+                  padding: "10px",
+                }}>
+                N
+              </div>
+              $0.90
+            </div>
+            <button className={styles.buy}>Buy $XYZ</button>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              marginTop: "20px",
+              padding: "0 10px",
+            }}>
+            <IconWorld color="#808191" style={{ marginRight: "20px" }} />
+            <Switch
+              onChange={handleChange}
+              checked={checked}
+              offColor="#fff"
+              onColor="#353945"
+              onHandleColor="#3772FF"
+              offHandleColor="#3772FF"
+              checkedIcon={
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    height: "100%",
+                    color: "#808191",
+                    paddingRight: 2,
+                  }}>
+                  <IconMoonStars />
+                </div>
+              }
+              uncheckedIcon={
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    height: "100%",
+                    color: "black",
+                    paddingLeft: 2,
+                  }}>
+                  <IconBrightness2 />
+                </div>
+              }
+            />
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
